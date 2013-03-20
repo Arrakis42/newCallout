@@ -34,6 +34,7 @@
       'js/services.js',
       'js/controllers.js',
       'js/filters.js',
+      'js/bootstrap.min.js',
       'js/directives.js'
     ], function() {
       // when all is done, execute bootstrap angular application
@@ -41,9 +42,36 @@
     });
   </script>
   <title>Callout Utility</title>
-  <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css.css"/>
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome-ie7.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
 </head>
 <body ng-cloak>
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+
+            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+
+            <!-- Be sure to leave the brand out there if you want it shown -->
+            <a class="brand" href="#">Project name</a>
+
+            <!-- Everything you want hidden at 940px or less, place within here -->
+            <div class="nav-collapse collapse">
+                <!-- .nav, .navbar-search, .navbar-form, etc -->
+            </div>
+
+        </div>
+    </div>
+</div>
+
 
 
 </body>
