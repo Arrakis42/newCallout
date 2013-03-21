@@ -22,7 +22,7 @@ ngModule.directive('myDataTable', function()
             //use default options if none specified by the user
             options =
             {
-                "sDom": "<'row well-margin-fix'<'span6'r>>t<'row'<'span4'i><'span4'l><'span4'p>>", //"<'row well-margin-fix'<'span6'r>>t<'row'<'span6'i><lp>>",
+                "sDom": "<'row well-margin-fix'<'span6'r>>t<'row'<'span4'i><'span4'l><'span4'p>>", //"<'row well-margin-fix'<'span6'r>>t<'row'<'span6'i><lp>>",   // setup the different pieces
                 "sPaginationType": "bootstrap",
                 "oLanguage":
                 {
