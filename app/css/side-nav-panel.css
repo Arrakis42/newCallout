@@ -1,0 +1,280 @@
+/* ------------------------------------------------------------
+    Title:  Side Navigation Panel
+    Note:   The app should call "css/side-nav-panel.css", not this LESS file. 
+            Bootstrap is NOT a dependency for the look and feel of this panel, it will look fine without it.
+            We're just using Bootstrap's variables and mixins here for convieneince while coding the LESS.
+--------------------------------------------------------------- */
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+.clearfix:after {
+    clear: both;
+}
+.hide-text {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+.input-block-level {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    background: #2b2b2b;
+}
+/* Wrapper around existing site content
+----------------------------------------------------- */
+#snp-site-wrapper {
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    -webkit-box-shadow: -1px 0 15px 0px #131313;
+    -moz-box-shadow: -1px 0 15px 0px #131313;
+    box-shadow: -1px 0 15px 0px #131313;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    -o-transition: -o-transform 0.3s;
+    transition: transform 0.3s;
+}
+#snp-site-wrapper.togglePanel {
+    -webkit-transform: translate(260px, 0);
+    -moz-transform: translate(260px, 0);
+    -ms-transform: translate(260px, 0);
+    -o-transform: translate(260px, 0);
+    transform: translate(260px, 0);
+}
+#snp-site-wrapper.togglePanelFallback {
+    left: 260px;
+}
+/* Toggle Button (may need to be modified per app)
+----------------------------------------------------- */
+#snp-toggle {
+    position: absolute;
+    top: 7px;
+    left: 6px;
+    padding: 4px 4px 0 4px;
+    text-decoration: none;
+}
+#snp-toggle:hover {
+    text-decoration: none;
+}
+#snp-toggle i {
+    font-size: 24px;
+    color: #e1dfDf;
+    -webkit-font-smoothing: antialiased;
+}
+/* Panel
+----------------------------------------------------- */
+#side-nav-panel {
+    display: none;
+    width: 260px;
+    min-height: 100%;
+    background: #2b2b2b;
+    border-top: 1px solid #2b2b2b;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* Panel Tabs
+    -------------------------------- */
+
+    /* Panel Content
+    -------------------------------- */
+
+    /* Error Messaging
+    -------------------------------- */
+
+}
+#side-nav-panel .snp-tabs,
+#side-nav-panel .snp-tab-content {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    clear: both;
+}
+#side-nav-panel .snp-tabs {
+    width: 260px;
+    float: left;
+}
+#side-nav-panel .snp-tabs li {
+    margin: 0;
+    padding: 0;
+    width: 128px;
+    width: 132px\9;
+    /* IE6-9 */
+
+    height: 39px;
+    float: left;
+    background: #2b2b2b;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    line-height: 39px;
+    cursor: pointer;
+    border-top: 1px solid #333333;
+    border-right: 1px solid #212121;
+    border-bottom: 1px solid #212121;
+    border-left: 1px solid #333333;
+    position: relative;
+}
+#side-nav-panel .snp-tabs li:first-child {
+    width: 123px;
+}
+#side-nav-panel .snp-tabs li:last-child {
+    width: 132px;
+}
+#side-nav-panel .snp-tabs li:hover {
+    color: #a6a6a6;
+}
+#side-nav-panel .snp-tabs li.active {
+    color: #cfcfcf;
+}
+#side-nav-panel .snp-tabs li.active:after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 100%;
+    height: 2px;
+    background: #0071b3;
+    border-right: 1px solid #004c73;
+}
+#side-nav-panel .snp-tab-content {
+    display: none;
+}
+#side-nav-panel .snp-tab-content li {
+    margin: 0;
+    padding: 0 8px 0 6px;
+    font-size: 14px;
+    height: 42px;
+    line-height: 42px;
+    text-shadow: 0 1px 1px #212121;
+    border-top: 1px solid #333333;
+    border-bottom: 1px solid #212121;
+}
+#side-nav-panel .snp-tab-content li:hover {
+    background: #333333;
+}
+#side-nav-panel .snp-tab-content li i {
+    font-size: 23px;
+    padding: 0 5px 0 0;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+}
+#side-nav-panel .snp-tab-content li:hover i {
+    color: #fff;
+}
+#side-nav-panel .snp-tab-content li a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-overflow: clip \9;
+    -ms-text-overflow: clip \9;
+}
+#side-nav-panel .snp-tab-content .snp-group,
+#side-nav-panel .snp-tab-content .snp-group:hover {
+    padding-bottom: 1px;
+    color: #6e6e6e;
+    background: #383838;
+    font-size: 11px;
+    height: 18px;
+    line-height: 18px;
+    text-transform: uppercase;
+    border-top: 1px solid #404040;
+    border-bottom: 1px solid #212121;
+    background-image: -moz-linear-gradient(bottom, #303030 9%, #383838 55%);
+    background-image: -webkit-linear-gradient(bottom, #303030 9%, #383838 55%);
+    background-image: -o-linear-gradient(bottom, #303030 9%, #383838 55%);
+    background-image: -ms-linear-gradient(bottom, #303030 9%, #383838 55%);
+    background-image: linear-gradient(bottom, #303030 9%, #383838 55%);
+}
+#side-nav-panel .snp-tab-content .active,
+#side-nav-panel .snp-tab-content .active:hover {
+    background: #212121;
+    border-top: 1px solid #212121;
+}
+#side-nav-panel .snp-tab-content .active a {
+    color: #cfcfcf;
+    cursor: default;
+}
+#side-nav-panel .snp-tab-content .active i,
+#side-nav-panel .snp-tab-content .active:hover i {
+    color: #0071b3;
+}
+#side-nav-panel .snp-tab-content a {
+    display: block;
+    color: #a6a6a6;
+    text-decoration: none;
+}
+#side-nav-panel .snp-tab-content a:hover {
+    text-decoration: none;
+    color: #cfcfcf;
+}
+#side-nav-panel .snp-error,
+#side-nav-panel .snp-no-results {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: 15px;
+    color: #666;
+    display: none;
+}
+#side-nav-panel .snp-no-results {
+    margin-top: 55px;
+    color: #6e6e6e;
+}
+/* Panel Search/Filter
+-------------------------------- */
+#snp-search {
+    border-bottom: 1px solid #212121;
+}
+#snp-search input {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: inline-block;
+    width: 206px;
+    height: 18px;
+    padding: 4px 14px;
+    margin: 10px 0 12px 10px;
+    margin-left: 11px \9;
+    /* IE6-9 */
+
+    font-size: 12px;
+    line-height: 16px;
+    color: #6e6e6e;
+    background-color: #353535;
+    border: none;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    /* two -moz prefix versions on purpose */
+}
+#snp-search input:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    outline: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+#snp-search input:-ms-input-placeholder {
+    color: #555;
+}
+#snp-search input:-moz-placeholder {
+    color: #555;
+}
+#snp-search input::-moz-placeholder {
+    color: #555;
+}
+#snp-search input::-webkit-input-placeholder {
+    color: #555;
+}

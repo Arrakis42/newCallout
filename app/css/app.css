@@ -31,4 +31,8 @@
 
 /*Custom Styles*/
 
-
+#wwtLogo {
+    height: 40px;
+    float: left;
+    margin-left: 15px;
+}

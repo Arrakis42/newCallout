@@ -8,51 +8,54 @@
     <link rel="stylesheet" href="css/bootstrap-responsive.min.css"/>
     <link rel="stylesheet" href="css/font-awesome-ie7.min.css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/side-nav-panel.css"/>
 </head>
 <body>
 <!--Navbar Master-->
-<div class="containter-fluid">
-    <div class="row-fluid">
-        <div class="navbar span12">
-            <div class="navbar-inner">
-                <div class="container">
-                    <!-- Be sure to leave the brand out there if you want it shown -->
-                    <a class="brand" ><i style="padding-right: 5px; color: green;" class="icon-money"></i>ItemCalculator</a>
-                    <ul class="nav">
-                        <li><a href="#"><i class="icon-shopping-cart"></i>: 4</a></li>
-                        <li><a href="#">Manage Carts</a></li>
-                        <li><a href="#">Manage Addresses</a></li>
-                    </ul>
-                    <ul class="nav pull-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i>
-                                Horstmac
-                                <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Change Program</a></li>
-                                <li><a href="#">Change Setups</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+<div id="snp-site-wrapper">
+    <div class="containter-fluid">
+        <div class="row-fluid">
+            <div class="navbar span12">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <!-- Be sure to leave the brand out there if you want it shown -->
+                        <a id="snp-toggle" ><i class="icon-th"></i></a><img  id="wwtLogo" src="img/wwt_logo.png"> <span class="brand">Callout</span>
+                        <ul class="nav">
+                            <li><a href="#"><i class="icon-shopping-cart"></i>: 4</a></li>
+                            <li><a href="#">Manage Carts</a></li>
+                            <li><a href="#">Manage Addresses</a></li>
+                        </ul>
+                        <ul class="nav pull-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i>
+                                    Horstmac
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Change Program</a></li>
+                                    <li><a href="#">Change Setups</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </li>
+                        </ul>
 
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--End Master Nav-->
+        <!--End Master Nav-->
 
-    <div ng-view></div>
+        <div ng-view></div>
 
 
-    <!--Footer-->
-    <div class="navbar navbar-fixed-bottom">
-        <div class="navbar-inner footerSizeAdjust">
+        <!--Footer-->
+        <div class="navbar navbar-fixed-bottom">
+            <div class="navbar-inner footerSizeAdjust">
 
+            </div>
         </div>
+        <!--End Footer-->
     </div>
-    <!--End Footer-->
 </div>
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
@@ -66,6 +69,22 @@
 <script src="js/bootstrap.js"></script>
 <script src="js/cartCtrl.js"></script>
 <script src="js/itemSearchCtrtl.js"></script>
+<script src="lib/side-nav-panel.js"></script>
+<script>
+    sideNavPanel.createSideNavPanel($("#snp-site-wrapper"), $("#snp-toggle"), {"Reports": {}, "Applications": {"undefined": [
+        {"baseUrl": "www-dev.wwt.com/", "groupName": "undefined", "location": "salesContractManagement", "mobileEnabledFlag": "N", "name": "Comet", "iconName": "bar-chart"},
+        {"baseUrl": "www-dev.wwt.com/", "groupName": "undefined", "location": "CustomerLanding", "mobileEnabledFlag": "N", "name": "CustomerLanding", "iconName": "dashboard"},
+        {"baseUrl": "www-dev.wwt.com/", "groupName": "undefined", "location": "userAdmin", "mobileEnabledFlag": "N", "name": "User Management", "iconName": null},
+        {"baseUrl": "www-dev.wwt.com/", "groupName": "undefined", "location": "CustomerHub", "mobileEnabledFlag": "N", "name": "CustomerHub", "iconName": "group"},
+        {"baseUrl": "www-dev.wwt.com/", "groupName": "undefined", "location": "profilemanagement", "mobileEnabledFlag": "N", "name": "Profile Management", "iconName": "user"},
+        {"baseUrl": "www-dev.wwt.com/", "groupName": "undefined", "location": "partnerhub", "mobileEnabledFlag": "N", "name": "partnerhub", "iconName": "globe"},
+        {"baseUrl": "www-dev.wwt.com/", "groupName": "undefined", "location": "itemcalculator", "mobileEnabledFlag": "N", "name": "Callout Utility", "iconName": "bullhorn"}
+    ], "Extranets": [
+        {"baseUrl": "www-dev.wwt.com/", "groupName": "Extranets", "location": "extranet/displayExtranet.do?extranet.appId=215&folderId=4191", "mobileEnabledFlag": "N", "name": "Human Resources Extranet", "iconName": "folder-open"},
+        {"baseUrl": "www-dev.wwt.com/", "groupName": "Extranets", "location": "extranet/displayExtranet.do?extranet.appId=321&folderId=4990", "mobileEnabledFlag": "N", "name": "IT Extranet", "iconName": "folder-open"},
+        {"baseUrl": "www-dev.wwt.com/", "groupName": "Extranets", "location": "extranet/displayExtranet.do?extranet.appId=251&folderId=4687", "mobileEnabledFlag": "N", "name": "WWT Employee Extranet", "iconName": "folder-open"}
+    ]}});
+</script>
 
 </body>
 </html>
